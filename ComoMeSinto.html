@@ -1,0 +1,194 @@
+<html>
+
+<head>
+    <title>Como me sinto? Checklist para adultos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Como me sinto? Checklist para adultos</h1>
+    <!-- Criar uma caixa com as instruções -->
+    <div class="caixa caixa-instrucoes">
+        <p>A Saúde Psicológica é parte integrante e muito importante da nossa saúde e bem-estar. Quando nos sentimos psicológicamente bem, temos mais energia e maior capacidade de resolver problemas quotidianos, de enfrentar o stresse do dia-a-dia e de gerir as incertezas que fazem parte da vida.</p>
+        <p>Contudo, determinados acontecimentos, a nível pessoal (por exemplo, um problema de saúde, uma separação ou divórcio, um problema no trabalho ou a perda de emprego ou rendimentos) ou a nível social (por exemplo, uma crise económica, uma catástrofe natural, uma pandemia ou uma guerra) podem ser muito desafiantes e ter impacto na forma como nos sentimos, pensamentos e agimos, afectando negativamente a nossa Saúde Psicológica e bem-estar.</p>
+        <p>É muito importante monitorizarmos e cuidarmos da nossa Saúde Psicológica e do nosso bem-estar sempre, mas sobretudo em períodos particularmente exigentes da nossa vida.</p>
+        <p>Utilize esta Checklist para refletir sobre como se tem sentido nas últimas duas semanas. Responda, o mais sinceramente possível e com base na sua experiência pessoal, assinalando com um <input type="checkbox" checked disabled> sempre que a resposta às afirmações for “sim, na maior parte do tempo”.</p>
+        <p>Não existem respostas “certas” ou “erradas”, esta Checklist serve apenas para que possa reconhecer e refletir sobre os seus pensamentos, sentimentos e comportamentos re- centes.</p>
+        <p>Os resultados desta Checklist não constituem, de forma alguma, uma avaliação ou diagnóstico psicológico. Servem ape- nas para o ajudar a pensar sobre si próprio/a, sobre como se tem sentido nas últimas duas semanas. Independentemente dos resultados, se está preocupado/a com a sua Saúde Psicológica, procure ajuda profissional um Psicólogo pode ajudar.</p>
+       
+        <!-- Criar um botão para iniciar o questionário -->
+        <button class="botao-iniciar" id="botaoIniciar">Iniciar</button>             
+    </div>
+    
+    <div class="grupo-perguntas">    
+        <!-- Criar uma caixa para cada pergunta -->
+        <div class="caixa caixa-pergunta" id="q1">
+            <p>Sinto-me muito cansado/a, com falta de energia.</p>
+            <ul>
+                <li><input type="radio" id="q1a" name="q1" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q1b" name="q1" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar1">Avançar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q2">
+            <p>Discuto com a minha família ou amigos.</p>
+            <ul>
+                <li><input type="radio" id="q2a" name="q2" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q2b" name="q2" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar2">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar2">Voltar</button>
+        </div>
+        
+        <div class="caixa caixa-pergunta" id="q3">
+            <p>Sinto-me muito nervoso/a, ansioso/a e/ou irritável.</p>
+            <ul>
+                <li><input type="radio" id="q3a" name="q3" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q3b" name="q3" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar3">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar3">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q4">
+            <p>É difícil relaxar.</p>
+            <ul>
+                <li><input type="radio" id="q4a" name="q4" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q4b" name="q4" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar4">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar4">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q5">
+            <p>Estou constantemente preocupado com alguma coisa.</p>
+            <ul>
+                <li><input type="radio" id="q5a" name="q5" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q5b" name="q5" value="nao"> Não, na maior parte do tempo</li>
+                </ul>
+                <button class="botao-avancar" id="botaoAvancar5">Avançar</button>
+                <button class="botao-voltar" id="botaovoltar5">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q6">
+            <p>Sinto-me culpado/a por alguma coisa.</p>
+            <ul>
+                <li><input type="radio" id="q6a" name="q6" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q6b" name="q6" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar6">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar6">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q7">
+            <p>Sinto-me pessimista, sem esperança no futuro.</p>
+            <ul>
+                <li><input type="radio" id="q7a" name="q7" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q7b" name="q7" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar7">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar7">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q8">
+            <p>Sinto que tudo é um esforço para mim.</p>
+            <ul>
+                <li><input type="radio" id="q8a" name="q8" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q8b" name="q8" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar8">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar8">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q9">
+            <p>Sinto-me triste, nada me anima.</p>
+            <ul>
+                <li><input type="radio" id="q9a" name="q9" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q9b" name="q9" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar9">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar9">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q10">
+            <p>Não tenho motivação ou interesse em fazer as actividades que antes me davam prazer.</p>
+            <ul>
+                <li><input type="radio" id="q10a" name="q10" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q10b" name="q10" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar10">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar10">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q11">
+            <p>Tenho dificuldade em concentrar-me e/ou tomar decisões.</p>
+            <ul>
+                <li><input type="radio" id="q11a" name="q11" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q11b" name="q11" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar11">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar11">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q12">
+            <p>Sinto-me sozinho/a e/ou que não tenho a quem pedir ajuda ou apoio se precisar.</p>
+            <ul>
+                <li><input type="radio" id="q12a" name="q12" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q12b" name="q12" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar12">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar12">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q13">
+            <p>Sinto que não consigo lidar com esta situação e/ou que não controlo a minha vida (o meu comportamento, pensamento e emoções).</p>
+            <ul>
+                <li><input type="radio" id="q13a" name="q13" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q13b" name="q13" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar13">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar13">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q14">
+            <p>O meu padrão habitual de sono e/ou apetite alterou- se (ex. não consigo dormir, durmo mais; como mais, como menos).</p>
+            <ul>
+                <li><input type="radio" id="q14a" name="q14" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q14b" name="q14" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar14">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar14">Voltar</button>
+        </div>
+
+        <div class="caixa caixa-pergunta" id="q15">
+            <p>O meu padrão habitual de sono e/ou apetite alterou- se (ex. não consigo dormir, durmo mais; como mais, como menos).</p>
+            <ul>
+                <li><input type="radio" id="q15a" name="q15" value="sim"> Sim, na maior parte do tempo</li>
+                <li><input type="radio" id="q15b" name="q15" value="nao"> Não, na maior parte do tempo</li>
+            </ul>
+            <button class="botao-avancar" id="botaoAvancar15">Avançar</button>
+            <button class="botao-voltar" id="botaovoltar15">Voltar</button>
+        </div>
+    </div>
+    <!-- Criar uma caixa para mostrar o resultado -->
+    <div class="caixa caixa-resultado" id="resultado">
+        <p id="total"></p>
+        <table id="chave">
+            <tr>
+                <td class="resultado">0 — 3</td>
+                <td>Parece sentir-se com Saúde Psicológica e bem-estar. Lembre-se que é natural sentir ansiedade e preocupação perante situações exigentes, desafiantes e de incerteza. Mantenha-se ativo/a e conectado/a com familiares e amigos, cuide da sua Saúde Psicológica e do seu bem- estar.</td>
+            </tr>
+            <tr>
+                <td class="resultado">4 — 8</td>
+                <td>Parece poder estar a sentir algumas dificuldades de Saúde Psicológica e bem-estar. Lembre-se que é natural sentir ansiedade e preocupação perante situações exigentes, desafiantes e de incerteza. Fale com pessoas em quem confia sobre aquilo que o/a preocupa, reserve tempo para cuidar de si e procure ajuda – um Psicólogo/a pode ajudar.</td>
+            </tr>
+            <tr>
+                <td class="resultado">9 — 15</td>
+                <td>Pode sentir a sua Saúde Psicológica e seu bem-estar ameaçados. Quando temos de lidar com experiências difíceis e os nossos sentimentos interferem na nossa vida e no nosso bem-estar, devemos procurar ajuda. Um Psicólogo/a pode colaborar connosco e ajudar-nos a pensar de forma mais clara e a encontrar estratégias para resolvermos as nossas dificuldades.</td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

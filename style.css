@@ -1,0 +1,153 @@
+/* Estilos CSS para definir a aparência da página e dos elementos */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e8f4ea; /* Um verde claro e suave */
+    color: #333;
+}
+
+h1 {
+    color: #4a7c59; /* Um verde escuro que transmite seriedade */
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h2 {
+    color: #6aa97e; /* Um verde médio para títulos secundários */
+    margin-left: 40px;
+    margin-bottom: 0.5em;
+}
+
+p, ul, li {
+    line-height: 1.6;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 80px;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.resultado {
+    font-weight: bold;
+    color: #557A95;
+}
+
+/* Estilos CSS para criar as caixas arredondadas com as cores desejadas */
+.caixa {
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caixa-instrucoes {
+    background-color: #88a097; /* Um verde acinzentado para as instruções */
+    color: #fff;
+}
+
+.caixa-pergunta {
+    background-color: #88a097; /* Um verde acinzentado para as perguntas */
+    color: #fff;
+    display: none;
+}
+
+.caixa-resultado {
+    background-color: #88a097; /* Mantendo a cor verde acinzentada para consistência */
+    color: #fff;
+    display: none;
+}
+
+/* Estilos CSS para estilizar os botões */
+.botao-avancar, .botao-iniciar, .botao-voltar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6aa97e; /* Um verde médio para os botões */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao-avancar:hover, .botao-iniciar:hover, .botao-voltar:hover {
+    background-color: #4a7c59; /* Um verde escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+/* Estilos CSS padrão para dispositivos maiores */
+/* ... seus estilos CSS atuais ... */
+
+/* Estilos CSS para dispositivos com telas até 768px de largura */
+@media (max-width: 768px) {
+    h1, h2 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    p, ul, li, table, td {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .caixa {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Ajuste o tamanho da fonte para uma melhor leitura em telas pequenas */
+    body, h1, h2, p, ul, li, table, td {
+        font-size: smaller;
+    }
+
+    /* Ajuste o tamanho dos botões para melhor toque em telas de toque */
+    .botao-avancar, .botao-iniciar, .botao-voltar {
+        padding: 12px 24px;
+        font-size: larger;
+    }
+}
+
+/* Estilos CSS para dispositivos com telas até 480px de largura */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Tamanho menor para o título principal */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Tamanho menor para títulos secundários */
+    }
+
+    /* Reduzir ainda mais as margens para aproveitar melhor o espaço da tela */
+    p, ul, li, table, td {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Ajustes adicionais para botões em telas muito pequenas */
+    .botao-avancar, .botao-iniciar, .botao-voltar {
+        padding: 15px 30px;
+        font-size: medium; /* Tamanho médio para facilitar a leitura */
+    }
+}
