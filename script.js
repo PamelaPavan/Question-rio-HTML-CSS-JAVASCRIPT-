@@ -1,21 +1,16 @@
 
 
-
 // Adiciona um ouvinte de eventos ao botão que chama a função iniciar quando clicado
 document.getElementById('botaoIniciar').addEventListener('click', iniciar);
 
 var perguntaAtual = 1;
 
-// Obtém todos os botões de avançar pela classe
-var botoesAvancar = document.getElementsByClassName('botao-avancar');
+
 
 // Obtém todos os botões de voltar pela classe
 var botoesVoltar = document.getElementsByClassName('botao-voltar');
 
-// Percorre todos os botões de avançar e adiciona um ouvinte de eventos a cada um
-for (var i = 0; i < botoesAvancar.length; i++) {
-  botoesAvancar[i].addEventListener('click', avancar);
-}
+
 
 // Percorre todos os botões de voltar e adiciona um ouvinte de eventos a cada um
 for (var i = 0; i < botoesVoltar.length; i++) {
@@ -34,39 +29,66 @@ function iniciar() {
     primeira.style.display = 'block';
 }
 
-// Função para avançar para a próxima pergunta ou mostrar o resultado
-function avancar() {
-    // Obter todas as opções da pergunta atual
-    var opcoes = document.getElementsByName('q' + perguntaAtual);
-    // Verificar se alguma opção foi selecionada
-    var selecionado = Array.from(opcoes).some(radio => radio.checked);
-    
-    if (!selecionado) {
-        alert('Por favor, selecione uma opção para avançar.');
-        return; // Interrompe a função se nenhuma opção for selecionada
-    }
+// Cria uma variável para armazenar o índice da pergunta atual
+var currentQuestion = 0;
 
-    // Obter a pergunta atual
-    var atual = document.getElementById("q" + perguntaAtual);
-    // Esconder a pergunta atual
-    atual.style.display = "none";
-    // Incrementar o contador de pergunta atual
-    perguntaAtual++;
-    
-    // Verificar se existe uma próxima pergunta
-    if (perguntaAtual <= 15) {
-        // Obter a próxima pergunta
-        var proxima = document.getElementById("q" + perguntaAtual);
-        // Mostrar a próxima pergunta
-        proxima.style.display = "block";
-    } else {
-        // Se não existe uma próxima pergunta, mostrar o resultado
-        var resultado = document.getElementsByClassName("caixa-resultado")[0];
-        resultado.style.display = "block";
-        calcular();
-    }
+// Cria uma função para avançar para a próxima pergunta
+function nextQuestion() {
+  // Verifica se a pergunta atual é a última
+  if (currentQuestion == 9) {
+    // Chama a função para mostrar o resultado
+    calcular();
+  } else {
+    // Incrementa o índice da pergunta atual
+    currentQuestion++;
+    // Seleciona o elemento do formulário HTML
+    var form = document.getElementById("form");
+    // Altera o atributo action do formulário para a próxima pergunta
+    form.action = "pergunta" + (currentQuestion + 1) + ".html";
+    // Submete o formulário
+    form.submit();
+  }
 }
 
+// Modifica a função para validar as respostas
+function validate() {
+  // Seleciona o elemento que contém as opções de resposta
+  var options = document.getElementsByName("option");
+  // Cria uma variável para armazenar a resposta correta
+  var correctAnswer;
+  // Cria uma variável para armazenar a resposta do usuário
+  var userAnswer;
+  // Cria uma variável para indicar se o usuário respondeu ou não
+  var answered = false;
+  // Percorre as opções de resposta
+  for (var i = 0; i < options.length; i++) {
+    // Verifica se a opção atual está marcada
+    if (options[i].checked) {
+      // Atribui o valor da opção à resposta do usuário
+      userAnswer = options[i].value;
+      // Define a variável answered como verdadeira
+      answered = true;
+    }
+    // Verifica se a opção atual tem o atributo correto
+    if (options[i].hasAttribute("correct")) {
+      // Atribui o valor da opção à resposta correta
+      correctAnswer = options[i].value;
+    }
+  }
+  // Verifica se o usuário respondeu
+  if (answered) {
+    // Verifica se a resposta do usuário é igual à resposta correta
+    if (userAnswer == correctAnswer) {
+      // Incrementa a pontuação do usuário
+      score++;
+    }
+    // Chama a função para avançar para a próxima pergunta
+    nextQuestion();
+  } else {
+    // Mostra uma mensagem pedindo ao usuário para responder
+    alert("Por favor, selecione uma resposta.");
+  }
+}
 
 // Código JavaScript para adicionar lógica e interatividade à página web
 function calcular() {
